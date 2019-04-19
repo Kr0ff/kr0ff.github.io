@@ -1,0 +1,28 @@
+# Site specific settings
+title: "MountSec"
+name: "MountSec"
+#keywords: "Key, words, about, this, website"
+baseurl: "/darcli"
+url: "http://mountsec.com"
+description: "~# Noobie hacker's blog"
+cover: "/assets/img/cover.svg"
+fanpage_id: ""
+
+# Site general settings
+lang: "en"
+#lang_alternate: "pt_BR"
+ssl: false # It will redirect to https
+
+# Media
+# Just the shortname:
+# facebook: lampiaosec # Rigth
+# facebook: facebook.com/lampiaosec # Wrong
+disqus: 
+twitter: 
+facebook: 
+github: 
+google:
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
