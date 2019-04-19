@@ -23,6 +23,12 @@ facebook:
 github: 
 google:
 
+# Collection / Setting links for writeups
+collections_dir: _posts/htb-writeups
+collections_dir: _posts/vulnhub
+    
+
+
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title/
