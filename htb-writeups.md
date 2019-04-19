@@ -1,3 +1,3 @@
 ---
 layout: page
-title: ~# Hack The Box
+title: Hack The Box
