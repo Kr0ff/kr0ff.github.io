@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quick trip to root! DC-1 (Vulnhub)
-permalink: /vulnhub/dc-1
+permalink: /dc-1
 ---
 <img src="https://www.hackthebox.eu/badge/image/45668" alt="Hack The Box">
 [@Kr0ff](https://twitter.com/CptXrat)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HackTheBox - Access
-permalink: /htb-writeups/htb-access
+permalink: /htb-access
 ---
 
 ![BoxInfo]({{ site.baseurl }}/assets/htb-images/access/infocard.png)
