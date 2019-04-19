@@ -5,79 +5,10 @@ layout: default
 # $ cat about.txt
 {:id="about"}
 
-This is a theme intended to use to [lampiaosec](https://lampiaosec.github.io). So, it's our taste, but because we like free culture, it's free to.
+ I am a student who is very passionate about computer security, information security, penetration testing and red teaming. I work on boxes from [HackTheBox](https://www.hackthebox.eu/) and [VulnHub](https://www.vulnhub.com/). I love to help people to get started in ethical hacking, as well as to help them to do boxes from HackTheBox.
 
-The categories to post was to support us, but you can change as you need.
+ My dream is to become a Certified Penetration Tester and obtain the [OSCP](https://www.offensive-security.com/information-security-training/penetration-testing-training-kali-linux/) (Offensive Security Certified Professional). I have created this blog to show my methodology when doing vulnerable machines and to motivate people to be passionate about computer security !
 
-# $ cat contact.txt
-{:id="contact"}
+<3
 
-I think that all about this theme is intuitive, but if you want help, please, contact me: [gjuniioor](https://github.com/gjuniioor).
-
-# $ cat team.txt
-{:id="team"}
-
-<ul>
-{% for member in site.categories.team reversed %}
-<li id="{{ member.title }}">{{ member.title }}
-<ul>
-<li>{{ member.mail }}</li>
-<li><a href="https://github.com/{{ member.github }}">https://github.com/{{ member.github }}</a></li>
-<li><a href="{{ member.site }}">{{ member.site }}</a></li>
-</ul>
-</li>
-{% endfor %}
-</ul>
-
-# $ cat projects.txt
-{:id="projects"}
-
-<ul>
-{% for project in site.categories.projects %}
-<li><a href="{{ project.link }}">{{ project.title }}</a> - {{ project.description }}</li>
-{% endfor %}
-</ul>
-
-# $ cat tools.txt
-{:id="tools"}
-
-<ul>
-{% for tool in site.categories.tools %}
-<li><a href="{{ tool.link }}">{{ tool.title }}</a> - {{ tool.description }}</li>
-{% endfor %}
-</ul>
-
-# $ cat talks.txt
-{:id="talks"}
-
-<ul>
-{% for talk in site.categories.talks %}
-<li><a href="{{ talk.link }}" title="{{ talk.description }}">{{ talk.title }}</a> at {{ talk.where }}</li>
-{% endfor %}
-</ul>
-
-# $ cat posts.txt
-{:id="posts"}
-
-<ul>
-{% for post in site.categories.posts %}
-
-{% if post.en %}
-<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">en</a> :: <a href="{{ post.pt }}" title="{{ post.description_pt }}">pt_br</a></li>
-{% endif %}
-
-{% endfor %}
-</ul>
-
-# $ cat articles.txt
-{:id="articles"}
-
-<ul>
-{% for post in site.categories.articles %}
-
-{% if post.en %}
-<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">en</a> :: <a href="{{ post.pt }}" title="{{ post.description_pt }}">pt_br</a></li>
-{% endif %}
-
-{% endfor %}
-</ul>
+Kr0ff
