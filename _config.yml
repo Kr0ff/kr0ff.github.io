@@ -2,8 +2,8 @@
 title: "MountSec"
 name: "MountSec"
 #keywords: "Key, words, about, this, website"
-baseurl: "/"
-url: "http://mountsec.info"
+baseurl: 
+#url: "http://mountsec.info"
 description: "~# Noobie hacker's blog"
 cover: "/assets/img/cover.svg"
 fanpage_id: ""
@@ -31,4 +31,4 @@ collections_dir: _posts/vulnhub
 
 # Build settings
 markdown: kramdown
-permalink: /:categories/:title/
+permalink: /:title/
