@@ -81,8 +81,8 @@ pre {
 }
 
 img, main iframe {
-	width: 80%;
-	margin-left: 10%;
+	width: 60%;
+	margin-left: 15%;
 	border: 1px dashed rgba(255,255,255,0.5);
 }
 
