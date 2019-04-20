@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DC-1 (Vulnhub)
-categories: posts
+categories: vulnhub
 permalink: /dc-1
 ---
 <img src="https://www.hackthebox.eu/badge/image/45668" alt="Hack The Box">
