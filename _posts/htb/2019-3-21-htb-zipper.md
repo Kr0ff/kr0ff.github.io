@@ -9,7 +9,7 @@ permalink: /htb-zipper
 
 Starting off with a nmap scan to determine open ports, thus a potential attack vector!
 
-![Nmap]({{ site.baseurl }}/assets/htb-images/access/NmapScan.jpg)
+![NmapScan]({{ site.baseurl }}/assets/htb-images/zipper/NmapScan.jpg)
 
 Nmap showed me that port 80 and 22 are open so I was going to access the web server, but since the header of the nmap for port 80 output says: “It Works” I assumed that I will see the default page of apache, so I went straight to use dirbuster and check for folders and files on the webserver!
 
@@ -81,6 +81,6 @@ I now checked for the SSH keys of user zapper, I grabbed them and logged in with
 The script was actually starting the zabbix-agentd.service using systemctl. How could I exploit this ? Well, the other interesting part was that in the script, systemctl wasn't set with its' full path, so I could exploit that by setting a system variable. So now systemctl would be seen in 2 different folders and run twice by the script because it wouldn't know which path exactly to use, so it will use both.
 I created a file “systemctl” in the folder /home/zapper/utils/ and wrote inside “/bin/bash” and saved the file. When I exported the path to systemctl file which I created in /home/zapper/utils/, I set the permissions of the newly created file to 777 and checked to see if the system could see the file in the home folder of zapper. Now I just had to run the script and get root !
 
-![roottaken]({{ site.baseurl }}/assets/htb-images/zipper/roottaken.jpg)
+![roottaken]({{ site.baseurl }}/assets/htb-images/zipper/roottaken.png)
 
 That's the box Zipper from HackTheBox !
