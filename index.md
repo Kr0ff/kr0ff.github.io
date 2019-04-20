@@ -8,7 +8,29 @@ layout: default
 <ul>
 {% for post in site.categories.posts %}
 
-<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">Read</a></li>
+<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
+
+{% endfor %}
+</ul>
+
+# $ more htb.txt
+{:id="htb"}
+
+<ul>
+{% for post in site.categories.posts %}
+
+<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
+
+{% endfor %}
+</ul>
+
+# $ more vulnhub.txt
+{:id="vulnhub"}
+
+<ul>
+{% for post in site.categories.posts %}
+
+<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
 
 {% endfor %}
 </ul>
