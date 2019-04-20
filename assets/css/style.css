@@ -79,7 +79,10 @@ pre {
 	padding: 15px;
 	background-color: #0D0D0D;
 }
-
+.htb-tag {
+	max-width: 300px;
+	margin-left: 20%;
+}
 img, main iframe {
 	width: 60%;
 	margin-left: 20%;
