@@ -9,7 +9,7 @@ cover: "/assets/img/cover.svg"
 fanpage_id: ""
 
 # Site general settings
-lang: "en"
+#lang: "en"
 #lang_alternate: "pt_BR"
 ssl: false # It will redirect to https
 
@@ -23,10 +23,7 @@ facebook:
 github: 
 google:
 
-# Collection / Setting links for writeups
-collections_dir: _posts/htb-writeups
-collections_dir: _posts/vulnhub
-    
+
 
 
 # Build settings
