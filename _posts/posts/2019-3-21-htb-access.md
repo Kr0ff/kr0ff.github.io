@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HackTheBox - Access
+categories: posts
 permalink: /htb-access
 ---
 
