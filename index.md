@@ -2,13 +2,15 @@
 layout: default
 ---
 
-# $ cat about.txt
-{:id="about"}
+# $ cat posts.txt
+{:id="posts"}
 
- I am a student who is very passionate about computer security, information security, penetration testing and red teaming. I work on boxes from [HackTheBox](https://www.hackthebox.eu/) and [VulnHub](https://www.vulnhub.com/). I love to help people to get started in ethical hacking, as well as to help them to do boxes from HackTheBox.
+<ul>
+{% for post in site.categories.posts %}
 
- My dream is to become a Certified Penetration Tester and obtain the [OSCP](https://www.offensive-security.com/information-security-training/penetration-testing-training-kali-linux/) (Offensive Security Certified Professional). I have created this blog to show my methodology when doing vulnerable machines and to motivate people to be passionate about computer security !
+{% if post.en %}
+<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">en</a> :: <a href="{{ post.pt }}" title="{{ post.description_pt }}">pt_br</a></li>
+{% endif %}
 
-<3
-
-Kr0ff
+{% endfor %}
+</ul>
