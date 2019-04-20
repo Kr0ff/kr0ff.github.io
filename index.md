@@ -8,7 +8,7 @@ layout: default
 <ul>
 {% for post in site.categories.htb %}
 
-<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
+<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">Read</a></li>
 
 {% endfor %}
 </ul>
@@ -19,18 +19,7 @@ layout: default
 <ul>
 {% for post in site.categories.vulnhub %}
 
-<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
-
-{% endfor %}
-</ul>
-
-# $ cat posts.txt
-{:id="posts"}
-
-<ul>
-{% for post in site.categories.posts %}
-
-<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
+<li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">Read</a></li>
 
 {% endfor %}
 </ul>

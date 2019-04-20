@@ -3,7 +3,6 @@ layout: post
 title: DC-1 (Vulnhub)
 categories: vulnhub
 permalink: /dc-1
-author: Kr0ff
 ---
 
 [@Kr0ff](https://twitter.com/CptXrat)
