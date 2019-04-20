@@ -4,7 +4,7 @@ title: HackTheBox - Access
 categories: htb
 permalink: /htb-access
 author:
-    - Kr0ff
+    Kr0ff
 ---
 
 ![BoxInfo]({{ site.baseurl }}/assets/htb-images/access/infocard.png)
