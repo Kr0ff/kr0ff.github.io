@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# $ more htb.txt
+# $ more HackTheBox.txt
 {:id="htb"}
 
 <ul>
@@ -13,7 +13,7 @@ layout: default
 {% endfor %}
 </ul>
 
-# $ more vulnhub.txt
+# $ more VulnHub.txt
 {:id="vulnhub"}
 
 <ul>

