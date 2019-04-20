@@ -3,6 +3,8 @@ layout: post
 title: DC-1 (Vulnhub)
 categories: vulnhub
 permalink: /dc-1
+author:
+    - Kr0ff
 ---
 <img src="https://www.hackthebox.eu/badge/image/45668" alt="Hack The Box">
 [@Kr0ff](https://twitter.com/CptXrat)
