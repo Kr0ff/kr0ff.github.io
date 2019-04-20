@@ -5,8 +5,6 @@ categories: vulnhub
 permalink: /dc-1
 ---
 
-[@Kr0ff](https://twitter.com/CptXrat)
-
 # ~$Ov3rv1ew
 
 This is a writeup of the [DC-1 VulnHub](https://www.vulnhub.com/series/dc-1,199/) box. The vulnerability was that there was installed an outdated version of [Drupal CMS](https://unit42.paloaltonetworks.com/unit42-exploit-wild-drupalgeddon2-analysis-cve-2018-7600/) which lead to the exploitation of the webserver and getting a shell as 'www-data'. After that, a short digging in the system has showed that "find" program in Linux has a SUID which allowed the attacker to privilige escalate to root user.
