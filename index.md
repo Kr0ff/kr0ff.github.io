@@ -17,7 +17,7 @@ layout: default
 {:id="htb"}
 
 <ul>
-{% for post in site.categories.posts %}
+{% for post in site.categories.htb %}
 
 <li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
 
@@ -28,7 +28,7 @@ layout: default
 {:id="vulnhub"}
 
 <ul>
-{% for post in site.categories.posts %}
+{% for post in site.categories.vulnhub %}
 
 <li>{{ post.title }} :: <a href="{{ post.url }}" title="{{ post.description }}">{{ post.title }}</a></li>
 
