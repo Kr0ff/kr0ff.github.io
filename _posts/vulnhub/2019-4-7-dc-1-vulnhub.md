@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DC-1 (Vulnhub)
+title: DC-1
 categories: vulnhub
 permalink: /dc-1
 ---
