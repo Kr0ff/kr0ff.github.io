@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# $ cat about.txt
+# $ strings about.txt
 {:id="about"}
 
  I am a student who is very passionate about computer security, information security, penetration testing and red teaming. I work on boxes from [HackTheBox](https://www.hackthebox.eu/) and [VulnHub](https://www.vulnhub.com/). I love to help people to get started in ethical hacking, as well as to help them to do boxes from HackTheBox.
