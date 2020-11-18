@@ -1,14 +1,17 @@
 ---
-layout: default
+title: ..
+permalink: /about/
+layout: page
+comments: false
 ---
 
-# $ strings about.txt
-{:id="about"}
+## ~$ cat .about
 
- I am a student who is very passionate about computer security, information security, penetration testing and red teaming. I work on boxes from [HackTheBox](https://www.hackthebox.eu/) and [VulnHub](https://www.vulnhub.com/). I love to help people to get started in ethical hacking, as well as to help them to do boxes from HackTheBox.
+I am a security consultant who is very passionate about computers, security, networking, penetration testing and red teaming. I work on boxes from HackTheBox and VulnHub in my spare time and potentially will write a tool from time to time 😴. I love helping people to get started in hacking, pentesting, etc...
 
- My dream is to become a Certified Penetration Tester and obtain the [OSCP](https://www.offensive-security.com/information-security-training/penetration-testing-training-kali-linux/) (Offensive Security Certified Professional). I have created this blog to show my methodology when doing vulnerable machines and to motivate people to be passionate about computer security !
-
-<3
-
+I have created this blog to show my methodology when doing vulnerable machines and to motivate people to be passionate about computer security !
+		
+💚
+		
 Kr0ff
+- <https://github.com/{{ site.author.github }}>
